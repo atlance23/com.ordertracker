@@ -1,0 +1,254 @@
+/**
+* ================================
+* ######## CSS STYLESHEET ########
+* ================================
+*/
+
+/** 
+* -----------------
+* #### Imports ####
+* -----------------
+* @version v1.0.0
+* @author atlance23
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/** 
+* -----------------------
+* #### Global Styles ####
+* -----------------------
+* @version v1.0.0
+* @author atlance23
+*/
+
+:root {
+  /* Colors */
+  --primary-color: #FFFFFF;
+  --blue-color: #003087;
+  --red-color: #FF0000;
+  --wallisco-blue: #006bb6;
+
+  /* Fonts */
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  --heading-wght: 600;
+  --body-wght: 400;
+
+  /* Spacing */
+  --section-padding: 20px 60px;
+
+  /* Misc Styles */
+  --border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+html {
+  font-size: 16px;
+}
+
+button {
+  font-family: var(--primary-font);
+  font-weight: var(--body-wght);
+  background-color: #000;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: var(--heading-wght);
+  padding: 12px 32px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input, select {
+  font-family: var(--primary-font);
+  font-weight: var(--body-wght);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  transition: border-color 0.3s ease;
+}
+
+label {
+  font-family: var(--primary-font);
+  font-weight: var(--body-wght);
+  margin-bottom: 5px;
+}
+
+/**
+* --------------------
+* #### Components ####
+* --------------------
+* @version v1.0.0
+* @author atlance23
+*/
+
+#header {
+  background-color: var(--primary-color);
+  padding: 5px 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#headerLeft, #headerRight {
+  display: flex;
+  width: 50%;
+}
+
+#headerLeft {
+  justify-content: flex-start;
+}
+
+#headerRight {
+  justify-content: flex-end;
+}
+
+#hero {
+  background-color: var(--primary-color);
+  margin-top: 70px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+}
+
+#heroContent {
+  width: 100%;
+  height: 800px;
+  max-height: 100%;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/2026.02.26.Wallisco.Mobil.Kirkwood.Widescreen.avif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heroContent > #heroText {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  z-index: 10;
+}
+
+#heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/**
+* ---------------
+* #### Login ####
+* ---------------
+* @version v1.0.0
+* @author atlance23
+*/
+
+#loginFormContainer {
+  background-color: var(--primary-color);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#loginBranding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-image: linear-gradient(rgba(0, 107, 182, 0.55), rgba(0, 107, 182, 0.55)), url('/2026.02.26.Wallisco.Mobil.Kirkwood.avif');
+  height: 100%;
+  background-size: cover;
+  background-position: top;
+  color: var(--primary-color);
+  font-weight: var(--heading-wght);
+  font-family: var(--primary-font);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#loginLogo {
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+  background-image: url('/2026.02.25.wallisco.logo.avif');
+  background-size: cover;
+  background-position: center;
+  border: 20px solid var(--primary-color);
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+#loginForm > form {
+  width: 400px;
+  max-width: 100%
+}
+
+.username, .password {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: var(--heading-wght);
+  display: flex;
+  flex-direction: column;
+}
+
+.setPassword {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.setPassword > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+}
