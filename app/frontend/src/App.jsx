@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Auth0Provider
-        domain={import.meta.env.VITE_AUTH0_DOMAIN}
-        clientId={import.meta.env.VITE_CLIENT_ID}
+        domain="dev-4s2fkubvsdejxniw.us.auth0.com"
+        clientId="iZdQbAeWswYyz8NADI7Yg2ksXAqGCVf5"
         authorizationParams={{ redirect_uri: window.location.origin }}
       >
         <Routes>
