@@ -3,11 +3,8 @@ import Login from './routes/Login'
 import Home from './routes/Home'
 import assetManifest from './assetManifest.json'
 import { Auth0Provider } from "@auth0/auth0-react";
-import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
-  const isAuthenticated = useAuth0();
-
   return (
     <>
       <Auth0Provider
