@@ -3,7 +3,6 @@ import LogoutButton from "./LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react"
 
 export default function LoginForm() {
-    const { isAuthenticated } = useAuth0();
     return (
         <>
             <div id="loginFormContainer">
@@ -12,16 +11,12 @@ export default function LoginForm() {
                     <h2>Making It Convienient</h2>
                 </div>
                 <div id="loginForm">
-                    {!isAuthenticated && (
                         <>
                             <LoginButton />
                         </>
-                    )}
-                    {isAuthenticated && (
                         <>
                             <LogoutButton />
                         </>
-                    )}
                 </div>
             </div>
         </>
