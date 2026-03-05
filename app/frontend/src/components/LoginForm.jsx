@@ -1,4 +1,7 @@
-export default function LoginForm() {
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+
+export default function LoginForm({isAuthenticated}) {
     return (
         <>
             <div id="loginFormContainer">
@@ -7,20 +10,16 @@ export default function LoginForm() {
                     <h2>Making It Convienient</h2>
                 </div>
                 <div id="loginForm">
-                    <form onSubmit={(e) => {
-                        e.preventDefault();
-                        userInit();
-                    }}>
-                        <div className="username">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" id="username" name="username" />
-                        </div>
-                        <div className="password">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" id="password" name="password" />
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>  
+                    {!isAuthenticated && (
+                        <>
+                            <LoginButton />
+                        </>
+                    )}
+                    {isAuthenticated && (
+                        <>
+                            <LogoutButton />
+                        </>
+                    )}
                 </div>
             </div>
         </>
