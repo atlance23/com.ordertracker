@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <Routes>
-          <Route path="/" element={<Home companyLogoUri={assetManifest.companyLogoUri} isAuthenticated={isAuthenticated}/>} />
+          <Route path="/" element={<Home companyLogoUri={assetManifest.companyLogoUri} />} />
           <Route path="/login" element={<Login companyLogoUri={assetManifest.companyLogoUri} />} />
         </Routes> 
     </>
