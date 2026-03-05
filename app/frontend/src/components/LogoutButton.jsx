@@ -2,7 +2,7 @@ export default function LogoutButton() {
 
     return (
             <>
-                <button onClick={() => logout()}>
+                <button>
                     Sign Out
                 </button>
             </>

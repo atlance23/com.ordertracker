@@ -2,7 +2,7 @@ export default function LoginButton() {
 
     return (
             <>
-                <button onClick={() => loginWithRedirect()}>
+                <button>
                     Sign In
                 </button>
             </>
