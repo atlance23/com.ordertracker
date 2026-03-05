@@ -9,7 +9,7 @@ export default function LoginForm() {
                     <h2>Making It Convienient</h2>
                 </div>
                 <div id="loginForm">
-                    <LoginButton />
+                    
                 </div>
             </div>
         </>
